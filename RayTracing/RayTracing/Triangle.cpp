@@ -6,14 +6,14 @@ namespace Utils
 {
 
 
-	Triangle::Triangle()
-	{
-	}
+Triangle::Triangle()
+{
+}
 
 
-	Triangle::~Triangle()
-	{
-	}
+Triangle::~Triangle()
+{
+}
 
 
 }

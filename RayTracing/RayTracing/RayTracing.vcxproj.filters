@@ -31,6 +31,9 @@
     <Filter Include="Header Files\Utils">
       <UniqueIdentifier>{5c8e8889-2bc6-4529-80b4-b138cceae721}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Utils\Geometry">
+      <UniqueIdentifier>{45091d78-d4f0-4f51-8345-4d5ed9cf1910}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -42,17 +45,20 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Point3D.h">
+      <Filter>Header Files\Utils\Geometry</Filter>
+    </ClInclude>
     <ClInclude Include="Object.h">
-      <Filter>Header Files\Utils</Filter>
+      <Filter>Header Files\Utils\Geometry</Filter>
     </ClInclude>
     <ClInclude Include="Sphere.h">
-      <Filter>Header Files\Utils</Filter>
+      <Filter>Header Files\Utils\Geometry</Filter>
     </ClInclude>
     <ClInclude Include="Triangle.h">
-      <Filter>Header Files\Utils</Filter>
+      <Filter>Header Files\Utils\Geometry</Filter>
     </ClInclude>
-    <ClInclude Include="Point3D.h">
-      <Filter>Header Files\Utils</Filter>
+    <ClInclude Include="Ray.h">
+      <Filter>Header Files\Utils\Geometry</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
