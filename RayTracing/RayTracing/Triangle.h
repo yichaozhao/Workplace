@@ -1,8 +1,16 @@
 #pragma once
-class Triangle
+#include "Object.h"
+
+namespace Utils
+{
+
+
+class Triangle : public Object
 {
 public:
 	Triangle();
 	~Triangle();
 };
 
+
+}

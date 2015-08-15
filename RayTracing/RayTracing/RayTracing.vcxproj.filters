@@ -25,6 +25,12 @@
     <Filter Include="Source Files\Utils\Geometry">
       <UniqueIdentifier>{57a18851-c605-4084-ba17-d2ab8be1aff2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\RayTracer">
+      <UniqueIdentifier>{bf27f39c-1f91-433f-922a-0ee7d42a2075}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utils">
+      <UniqueIdentifier>{5c8e8889-2bc6-4529-80b4-b138cceae721}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -37,19 +43,19 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Object.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Triangle.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Utils</Filter>
     </ClInclude>
     <ClInclude Include="Sphere.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Triangle.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Point3D.h">
+      <Filter>Header Files\Utils</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="RayTracer.cpp">
-      <Filter>Source Files\RayTracer</Filter>
-    </ClCompile>
     <ClCompile Include="Object.cpp">
       <Filter>Source Files\Utils\Geometry</Filter>
     </ClCompile>
@@ -58,6 +64,9 @@
     </ClCompile>
     <ClCompile Include="Triangle.cpp">
       <Filter>Source Files\Utils\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

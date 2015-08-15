@@ -1,8 +1,15 @@
 #pragma once
+
+namespace Utils
+{
+
+
 class Object
 {
-public:
+protected:
 	Object();
 	~Object();
 };
 
+
+}
