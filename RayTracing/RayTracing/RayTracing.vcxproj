@@ -153,9 +153,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Object.cpp" />
-    <ClCompile Include="RayTracer.cpp" />
+    <ClCompile Include="RayTracer.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="Sphere.cpp" />
-    <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="Triangle.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
