@@ -22,6 +22,9 @@
     <Filter Include="Source Files\Scene">
       <UniqueIdentifier>{aed3e5c4-250f-4c33-95d4-e2c7a0dc2277}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Utils\Geometry">
+      <UniqueIdentifier>{57a18851-c605-4084-ba17-d2ab8be1aff2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -48,13 +51,13 @@
       <Filter>Source Files\RayTracer</Filter>
     </ClCompile>
     <ClCompile Include="Object.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Triangle.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Utils\Geometry</Filter>
     </ClCompile>
     <ClCompile Include="Sphere.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Utils\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Triangle.cpp">
+      <Filter>Source Files\Utils\Geometry</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
