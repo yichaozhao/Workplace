@@ -62,11 +62,11 @@
     <ClCompile Include="Sphere.cpp">
       <Filter>Source Files\Utils\Geometry</Filter>
     </ClCompile>
-    <ClCompile Include="Triangle.cpp">
-      <Filter>Source Files\Utils\Geometry</Filter>
-    </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Triangle.cpp">
+      <Filter>Source Files\Utils\Geometry</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
