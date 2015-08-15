@@ -1,5 +1,6 @@
 #pragma once
 #include "Object.h"
+#include "Point3D.h"
 
 namespace Utils
 {
@@ -7,9 +8,17 @@ namespace Utils
 
 class Sphere : public Object
 {
+
+private:
+	Point3D m_origin;
+	double m_radius;
+
 public:
-	Sphere();
-	~Sphere();
+	Sphere(Point3D origin, double radius) :
+		m_origin(origin),
+		m_radius(radius)
+	{}
+	~Sphere() {}
 };
 
 

@@ -6,14 +6,4 @@ namespace Utils
 {
 
 
-Sphere::Sphere()
-{
-}
-
-
-Sphere::~Sphere()
-{
-}
-
-
 }
