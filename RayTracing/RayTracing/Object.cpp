@@ -6,14 +6,4 @@ namespace Utils
 {
 
 
-Object::Object()
-{
-}
-
-
-Object::~Object()
-{
-}
-
-
 }

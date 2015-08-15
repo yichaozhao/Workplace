@@ -19,6 +19,8 @@ public:
 		m_radius(radius)
 	{}
 	~Sphere() {}
+
+	Point3D& GetOrigin() { return m_origin; }
 };
 
 

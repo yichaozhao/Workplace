@@ -6,9 +6,9 @@ namespace Utils
 
 class Object
 {
-protected:
-	Object();
-	~Object();
+public:
+	Object() {}
+	~Object() {}
 };
 
 
