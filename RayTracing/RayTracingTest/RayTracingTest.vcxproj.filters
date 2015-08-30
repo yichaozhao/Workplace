@@ -13,13 +13,22 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Utils">
+      <UniqueIdentifier>{64c0057e-ac3d-4527-907f-b7811a21195b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utils\Geometry">
+      <UniqueIdentifier>{34f98c21-d56a-498a-851c-ef61216d345c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="FirstUnitTest.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Point3DTest.cpp">
+      <Filter>Source Files\Utils\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="SphereTest.cpp">
+      <Filter>Source Files\Utils\Geometry</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

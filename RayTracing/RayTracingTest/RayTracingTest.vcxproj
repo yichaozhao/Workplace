@@ -150,7 +150,8 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="FirstUnitTest.cpp" />
+    <ClCompile Include="Point3DTest.cpp" />
+    <ClCompile Include="SphereTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GoogleTest\GoogleTest.vcxproj">

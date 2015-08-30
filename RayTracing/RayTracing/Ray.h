@@ -1,7 +1,7 @@
 #pragma once
 #include "Point3D.h"
 
-namespace Utils
+namespace Geom
 {
 
 
@@ -17,6 +17,8 @@ public:
 		m_origin(origin),
 		m_direction(direction)
 	{}
+
+	Point3D& GetOrigin() { return m_origin; };
 
 	~Ray() {}
 };

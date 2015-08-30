@@ -2,7 +2,7 @@
 #include "Object.h"
 #include "Point3D.h"
 
-namespace Utils
+namespace Geom
 {
 
 
@@ -21,6 +21,8 @@ public:
 	~Sphere() {}
 
 	Point3D& GetOrigin() { return m_origin; }
+	double GetRadius() { return m_radius; }
+
 };
 
 

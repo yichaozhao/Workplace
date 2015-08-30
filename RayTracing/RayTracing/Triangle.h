@@ -2,7 +2,7 @@
 #include "Object.h"
 #include "Point3D.h"
 
-namespace Utils
+namespace Geom
 {
 
 

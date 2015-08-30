@@ -34,6 +34,9 @@
     <Filter Include="Header Files\Utils\Geometry">
       <UniqueIdentifier>{45091d78-d4f0-4f51-8345-4d5ed9cf1910}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Utils\Math">
+      <UniqueIdentifier>{17a6033c-8249-4375-926b-f9f4f2435243}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -60,19 +63,13 @@
     <ClInclude Include="Ray.h">
       <Filter>Header Files\Utils\Geometry</Filter>
     </ClInclude>
+    <ClInclude Include="MathUtils.h">
+      <Filter>Header Files\Utils\Math</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Object.cpp">
-      <Filter>Source Files\Utils\Geometry</Filter>
-    </ClCompile>
-    <ClCompile Include="Sphere.cpp">
-      <Filter>Source Files\Utils\Geometry</Filter>
-    </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Triangle.cpp">
-      <Filter>Source Files\Utils\Geometry</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
