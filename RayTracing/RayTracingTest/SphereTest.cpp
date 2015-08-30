@@ -1,6 +1,5 @@
 #include "gtest/gtest.h"
-#include "Sphere.h"
-#include "Point3D.h"
+#include "Geometries.h"
 #include "MathUtils.h"
 
 

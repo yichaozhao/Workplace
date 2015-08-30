@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "Point3D.h"
+#include "Geometries.h"
 
 
 TEST(Point3DTest, constructor)

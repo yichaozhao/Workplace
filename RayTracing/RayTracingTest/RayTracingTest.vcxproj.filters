@@ -19,6 +19,9 @@
     <Filter Include="Source Files\Utils\Geometry">
       <UniqueIdentifier>{34f98c21-d56a-498a-851c-ef61216d345c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Utils\Math">
+      <UniqueIdentifier>{36dc8f9a-3c91-4812-9339-68819c518edc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -30,5 +33,10 @@
     <ClCompile Include="SphereTest.cpp">
       <Filter>Source Files\Utils\Geometry</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Geometries.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
