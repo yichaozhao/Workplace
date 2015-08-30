@@ -22,7 +22,6 @@ public:
 
 	Point3D& GetOrigin() { return m_origin; }
 	double GetRadius() { return m_radius; }
-
 };
 
 

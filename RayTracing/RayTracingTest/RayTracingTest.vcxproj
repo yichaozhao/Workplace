@@ -157,7 +157,9 @@
   <ItemGroup>
     <ClCompile Include="Point3DTest.cpp" />
     <ClCompile Include="MathUtilsTest.cpp" />
+    <ClCompile Include="RayTest.cpp" />
     <ClCompile Include="SphereTest.cpp" />
+    <ClCompile Include="TriangleTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GoogleTest\GoogleTest.vcxproj">

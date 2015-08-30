@@ -36,6 +36,12 @@
     <ClCompile Include="MathUtilsTest.cpp">
       <Filter>Source Files\Utils\Math</Filter>
     </ClCompile>
+    <ClCompile Include="TriangleTest.cpp">
+      <Filter>Source Files\Utils\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="RayTest.cpp">
+      <Filter>Source Files\Utils\Geometry</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Geometries.h">

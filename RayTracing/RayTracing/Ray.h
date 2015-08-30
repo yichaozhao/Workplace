@@ -17,10 +17,10 @@ public:
 		m_origin(origin),
 		m_direction(direction)
 	{}
+	~Ray() {}
 
 	Point3D& GetOrigin() { return m_origin; };
-
-	~Ray() {}
+	Point3D& GetDirection() { return m_direction; }
 };
 
 
