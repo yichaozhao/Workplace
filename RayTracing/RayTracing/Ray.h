@@ -21,6 +21,7 @@ public:
 
 	Point3D& GetOrigin() { return m_origin; };
 	Point3D& GetDirection() { return m_direction; }
+
 };
 
 

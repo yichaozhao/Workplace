@@ -42,6 +42,9 @@
     <ClCompile Include="RayTest.cpp">
       <Filter>Source Files\Utils\Geometry</Filter>
     </ClCompile>
+    <ClCompile Include="GeometryExtent3D.cpp">
+      <Filter>Source Files\Utils\Geometry</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Geometries.h">

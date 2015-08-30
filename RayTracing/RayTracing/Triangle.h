@@ -25,6 +25,7 @@ public:
 	Point3D& GetPointA() { return m_a; };
 	Point3D& GetPointB() { return m_b; };
 	Point3D& GetPointC() { return m_c; };
+
 };
 
 

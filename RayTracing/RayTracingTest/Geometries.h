@@ -4,3 +4,4 @@
 #include "Ray.h"
 #include "Sphere.h"
 #include "Triangle.h"
+#include "GeometryExtent3D.h"
