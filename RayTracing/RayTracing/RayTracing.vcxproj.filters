@@ -37,6 +37,9 @@
     <Filter Include="Header Files\Utils\Math">
       <UniqueIdentifier>{17a6033c-8249-4375-926b-f9f4f2435243}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Utils\Math">
+      <UniqueIdentifier>{2a0d402b-90ca-4d6e-8b74-ad05a97f1e87}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -68,8 +71,8 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="MathUtils.cpp">
+      <Filter>Source Files\Utils\Math</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
