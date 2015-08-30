@@ -16,5 +16,14 @@ TEST(SphereTest, constructor)
 	EXPECT_TRUE(Math::isEqual(sphere.GetOrigin().getY(), p_y));
 	EXPECT_TRUE(Math::isEqual(sphere.GetOrigin().getZ(), p_z));
 	EXPECT_TRUE(Math::isEqual(sphere.GetRadius(), radius));
+
+	EXPECT_TRUE(Math::isEqual(sphere.GetGeometryExtent3D().GetUpper().getX(), p_x + radius));
+	EXPECT_TRUE(Math::isEqual(sphere.GetGeometryExtent3D().GetLower().getX(), p_x - radius));
+
+	EXPECT_TRUE(Math::isEqual(sphere.GetGeometryExtent3D().GetUpper().getY(), p_y + radius));
+	EXPECT_TRUE(Math::isEqual(sphere.GetGeometryExtent3D().GetLower().getY(), p_y - radius));
+
+	EXPECT_TRUE(Math::isEqual(sphere.GetGeometryExtent3D().GetUpper().getZ(), p_z + radius));
+	EXPECT_TRUE(Math::isEqual(sphere.GetGeometryExtent3D().GetLower().getZ(), p_z - radius));
 }
 

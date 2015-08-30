@@ -1,6 +1,7 @@
 #pragma once
 #include "gtest/gtest.h"
 #include "MathUtils.h"
+#include "Point3D.h"
 
 
 TEST(MathUtilsTest, precision)
@@ -59,4 +60,22 @@ TEST(MathUtilsTest, isGreaterEqual)
 	EXPECT_TRUE(Math::isGreaterEqual(a, c));
 	EXPECT_TRUE(Math::isGreaterEqual(a, d));
 	EXPECT_TRUE(Math::isGreaterEqual(a, d));
+}
+
+TEST(MathUtilsTest, CalculateGeometryExtent)
+{
+	Geom::Point3D p1(2, 8, -1);
+	Geom::Point3D p2(1, -3, 2);
+	Geom::Point3D p3(5, 2, 10);
+
+	Geom::GeometryExtent3D extent = Math::CalculateGeometryExtent(3, p1, p2, p3);
+
+	EXPECT_TRUE(Math::isEqual(extent.GetLower().getX(), 1));
+	EXPECT_TRUE(Math::isEqual(extent.GetUpper().getX(), 5));
+
+	EXPECT_TRUE(Math::isEqual(extent.GetLower().getY(), -3));
+	EXPECT_TRUE(Math::isEqual(extent.GetUpper().getY(), 8));
+
+	EXPECT_TRUE(Math::isEqual(extent.GetLower().getZ(), -1));
+	EXPECT_TRUE(Math::isEqual(extent.GetUpper().getZ(), 10));
 }

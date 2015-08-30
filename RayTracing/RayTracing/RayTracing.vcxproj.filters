@@ -86,5 +86,11 @@
     <ClCompile Include="GeometryExtent3D.cpp">
       <Filter>Source Files\Utils\Geometry</Filter>
     </ClCompile>
+    <ClCompile Include="Triangle.cpp">
+      <Filter>Source Files\Utils\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Sphere.cpp">
+      <Filter>Source Files\Utils\Geometry</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

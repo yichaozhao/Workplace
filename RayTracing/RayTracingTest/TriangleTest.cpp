@@ -15,16 +15,25 @@ TEST(TriangleTest, constructor)
 
 	Geom::Triangle triangle(p_a, p_b, p_c);
 
-	EXPECT_EQ(p_a.getX(), p_a_x);
-	EXPECT_EQ(p_a.getY(), p_a_y);
-	EXPECT_EQ(p_a.getZ(), p_a_z);
+	EXPECT_EQ(triangle.GetPointA().getX(), p_a_x);
+	EXPECT_EQ(triangle.GetPointA().getY(), p_a_y);
+	EXPECT_EQ(triangle.GetPointA().getZ(), p_a_z);
 
-	EXPECT_EQ(p_b.getX(), p_b_x);
-	EXPECT_EQ(p_b.getY(), p_b_y);
-	EXPECT_EQ(p_b.getZ(), p_b_z);
+	EXPECT_EQ(triangle.GetPointB().getX(), p_b_x);
+	EXPECT_EQ(triangle.GetPointB().getY(), p_b_y);
+	EXPECT_EQ(triangle.GetPointB().getZ(), p_b_z);
 
-	EXPECT_EQ(p_c.getX(), p_c_x);
-	EXPECT_EQ(p_c.getY(), p_c_y);
-	EXPECT_EQ(p_c.getZ(), p_c_z);
+	EXPECT_EQ(triangle.GetPointC().getX(), p_c_x);
+	EXPECT_EQ(triangle.GetPointC().getY(), p_c_y);
+	EXPECT_EQ(triangle.GetPointC().getZ(), p_c_z);
+
+	EXPECT_EQ(triangle.GetGeometryExtent3D().GetLower().getX(), 0);
+	EXPECT_EQ(triangle.GetGeometryExtent3D().GetUpper().getX(), 6);
+
+	EXPECT_EQ(triangle.GetGeometryExtent3D().GetLower().getY(), 1);
+	EXPECT_EQ(triangle.GetGeometryExtent3D().GetUpper().getY(), 7);
+
+	EXPECT_EQ(triangle.GetGeometryExtent3D().GetLower().getZ(), 2);
+	EXPECT_EQ(triangle.GetGeometryExtent3D().GetUpper().getZ(), 8);
 }
 
