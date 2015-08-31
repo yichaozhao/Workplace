@@ -19,10 +19,10 @@ public:
 	Sphere(Point3D origin, double radius);
 	~Sphere() {}
 
-	virtual GeometryExtent3D& GetGeometryExtent3D() override { return m_extent; }
+	virtual const GeometryExtent3D& GetGeometryExtent3D() const override { return m_extent; }
 
-	Point3D& GetOrigin() { return m_origin; }
-	double GetRadius() { return m_radius; }
+	const Point3D& GetOrigin() const { return m_origin; }
+	double GetRadius() const { return m_radius; }
 
 };
 

@@ -155,7 +155,8 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="GeometryExtent3D.cpp" />
+    <ClCompile Include="GeometryExtent3DTest.cpp" />
+    <ClCompile Include="OctreeTest.cpp" />
     <ClCompile Include="Point3DTest.cpp" />
     <ClCompile Include="MathUtilsTest.cpp" />
     <ClCompile Include="RayTest.cpp" />

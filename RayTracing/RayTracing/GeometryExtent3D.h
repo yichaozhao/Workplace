@@ -15,8 +15,8 @@ public:
 	GeometryExtent3D(Point3D upper, Point3D lower);
 	~GeometryExtent3D() {}
 
-	Point3D& GetUpper() { return m_upper; }
-	Point3D& GetLower() { return m_lower; }
+	const Point3D& GetUpper() const { return m_upper; }
+	const Point3D& GetLower() const { return m_lower; }
 
 };
 

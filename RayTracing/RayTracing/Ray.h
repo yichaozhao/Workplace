@@ -19,8 +19,8 @@ public:
 	{}
 	~Ray() {}
 
-	Point3D& GetOrigin() { return m_origin; };
-	Point3D& GetDirection() { return m_direction; }
+	const Point3D& GetOrigin() const { return m_origin; };
+	const Point3D& GetDirection() const { return m_direction; }
 
 };
 

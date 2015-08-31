@@ -42,7 +42,10 @@
     <ClCompile Include="RayTest.cpp">
       <Filter>Source Files\Utils\Geometry</Filter>
     </ClCompile>
-    <ClCompile Include="GeometryExtent3D.cpp">
+    <ClCompile Include="OctreeTest.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="GeometryExtent3DTest.cpp">
       <Filter>Source Files\Utils\Geometry</Filter>
     </ClCompile>
   </ItemGroup>

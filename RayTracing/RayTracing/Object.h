@@ -13,7 +13,7 @@ public:
 	Object() {}
 	~Object() {}
 
-	virtual GeometryExtent3D& GetGeometryExtent3D() = 0;
+	virtual const GeometryExtent3D& GetGeometryExtent3D() const = 0;
 
 };
 

@@ -22,11 +22,11 @@ public:
 	Triangle(Point3D a, Point3D b, Point3D c);
 	~Triangle() {}
 
-	virtual GeometryExtent3D& GetGeometryExtent3D() override { return m_extent; }
+	virtual const GeometryExtent3D& GetGeometryExtent3D() const override { return m_extent; }
 
-	Point3D& GetPointA() { return m_a; };
-	Point3D& GetPointB() { return m_b; };
-	Point3D& GetPointC() { return m_c; };
+	const Point3D& GetPointA() const { return m_a; };
+	const Point3D& GetPointB() const { return m_b; };
+	const Point3D& GetPointC() const { return m_c; };
 
 };
 

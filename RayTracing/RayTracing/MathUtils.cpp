@@ -6,29 +6,29 @@
 namespace Math
 {
 
-bool isEqual(double a, double b, double precision)
+bool IsEqual(double a, double b, double precision)
 {
 	return std::abs(a - b) < precision;
 }
 
-bool isLess(double a, double b, double precision)
+bool IsLess(double a, double b, double precision)
 {
-	return a < b && !isEqual(a, b, precision);
+	return a < b && !IsEqual(a, b, precision);
 }
 
-bool isLessEqual(double a, double b, double precision)
+bool IsLessEqual(double a, double b, double precision)
 {
-	return a < b || isEqual(a, b, precision);
+	return a < b || IsEqual(a, b, precision);
 }
 
-bool isGreater(double a, double b, double precision)
+bool IsGreater(double a, double b, double precision)
 {
-	return a > b && !isEqual(a, b, precision);
+	return a > b && !IsEqual(a, b, precision);
 }
 
-bool isGreaterEqual(double a, double b, double precision)
+bool IsGreaterEqual(double a, double b, double precision)
 {
-	return a > b || isEqual(a, b, precision);
+	return a > b || IsEqual(a, b, precision);
 }
 
 Geom::GeometryExtent3D CalculateGeometryExtent(int argCount, Geom::Point3D ...)
@@ -52,7 +52,16 @@ Geom::GeometryExtent3D CalculateGeometryExtent(int argCount, Geom::Point3D ...)
 		max_z = std::fmax(max_z, p.getZ());
 	}
 
-	return Geom::GeometryExtent3D(Geom::Point3D(max_x, max_y, max_z), Geom::Point3D(min_x, min_y, min_z));
+	return Geom::GeometryExtent3D(Geom::Point3D(min_x, min_y, min_z), Geom::Point3D(max_x, max_y, max_z));
+}
+
+bool HasIntersection(Geom::GeometryExtent3D extent1, Geom::GeometryExtent3D extent2)
+{
+	return 
+		(IsLessEqual(extent1.GetLower().getX(), extent2.GetUpper().getX()) && IsLessEqual(extent2.GetLower().getX(), extent1.GetUpper().getX())) &&
+		(IsLessEqual(extent1.GetLower().getY(), extent2.GetUpper().getY()) && IsLessEqual(extent2.GetLower().getY(), extent1.GetUpper().getY())) &&
+		(IsLessEqual(extent1.GetLower().getZ(), extent2.GetUpper().getZ()) && IsLessEqual(extent2.GetLower().getZ(), extent1.GetUpper().getZ()));
+	
 }
 
 }
