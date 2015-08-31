@@ -43,13 +43,13 @@ Geom::GeometryExtent3D CalculateGeometryExtent(int argCount, Geom::Point3D ...)
 	{
 		Geom::Point3D& p = va_arg(pointList, Geom::Point3D);
 
-		min_x = std::fmin(min_x, p.getX());
-		min_y = std::fmin(min_y, p.getY());
-		min_z = std::fmin(min_z, p.getZ());
+		min_x = std::fmin(min_x, p.GetX());
+		min_y = std::fmin(min_y, p.GetY());
+		min_z = std::fmin(min_z, p.GetZ());
 
-		max_x = std::fmax(max_x, p.getX());
-		max_y = std::fmax(max_y, p.getY());
-		max_z = std::fmax(max_z, p.getZ());
+		max_x = std::fmax(max_x, p.GetX());
+		max_y = std::fmax(max_y, p.GetY());
+		max_z = std::fmax(max_z, p.GetZ());
 	}
 
 	return Geom::GeometryExtent3D(Geom::Point3D(min_x, min_y, min_z), Geom::Point3D(max_x, max_y, max_z));
@@ -58,9 +58,9 @@ Geom::GeometryExtent3D CalculateGeometryExtent(int argCount, Geom::Point3D ...)
 bool HasIntersection(Geom::GeometryExtent3D extent1, Geom::GeometryExtent3D extent2)
 {
 	return 
-		(IsLessEqual(extent1.GetLower().getX(), extent2.GetUpper().getX()) && IsLessEqual(extent2.GetLower().getX(), extent1.GetUpper().getX())) &&
-		(IsLessEqual(extent1.GetLower().getY(), extent2.GetUpper().getY()) && IsLessEqual(extent2.GetLower().getY(), extent1.GetUpper().getY())) &&
-		(IsLessEqual(extent1.GetLower().getZ(), extent2.GetUpper().getZ()) && IsLessEqual(extent2.GetLower().getZ(), extent1.GetUpper().getZ()));
+		(IsLessEqual(extent1.GetLower().GetX(), extent2.GetUpper().GetX()) && IsLessEqual(extent2.GetLower().GetX(), extent1.GetUpper().GetX())) &&
+		(IsLessEqual(extent1.GetLower().GetY(), extent2.GetUpper().GetY()) && IsLessEqual(extent2.GetLower().GetY(), extent1.GetUpper().GetY())) &&
+		(IsLessEqual(extent1.GetLower().GetZ(), extent2.GetUpper().GetZ()) && IsLessEqual(extent2.GetLower().GetZ(), extent1.GetUpper().GetZ()));
 	
 }
 

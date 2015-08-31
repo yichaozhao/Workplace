@@ -70,14 +70,14 @@ TEST(MathUtilsTest, CalculateGeometryExtent)
 
 	Geom::GeometryExtent3D extent = Math::CalculateGeometryExtent(3, p1, p2, p3);
 
-	EXPECT_TRUE(Math::IsEqual(extent.GetLower().getX(), 1));
-	EXPECT_TRUE(Math::IsEqual(extent.GetUpper().getX(), 5));
+	EXPECT_TRUE(Math::IsEqual(extent.GetLower().GetX(), 1));
+	EXPECT_TRUE(Math::IsEqual(extent.GetUpper().GetX(), 5));
 
-	EXPECT_TRUE(Math::IsEqual(extent.GetLower().getY(), -3));
-	EXPECT_TRUE(Math::IsEqual(extent.GetUpper().getY(), 8));
+	EXPECT_TRUE(Math::IsEqual(extent.GetLower().GetY(), -3));
+	EXPECT_TRUE(Math::IsEqual(extent.GetUpper().GetY(), 8));
 
-	EXPECT_TRUE(Math::IsEqual(extent.GetLower().getZ(), -1));
-	EXPECT_TRUE(Math::IsEqual(extent.GetUpper().getZ(), 10));
+	EXPECT_TRUE(Math::IsEqual(extent.GetLower().GetZ(), -1));
+	EXPECT_TRUE(Math::IsEqual(extent.GetUpper().GetZ(), 10));
 }
 
 TEST(MathUtilsTest, HasIntersection)

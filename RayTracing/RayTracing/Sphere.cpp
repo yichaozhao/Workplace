@@ -6,8 +6,8 @@ namespace Geom
 
 GeometryExtent3D CalculateGeometryExtent(Point3D origin, double radius)
 {
-	Point3D upper(origin.getX() + radius, origin.getY() + radius, origin.getZ() + radius);
-	Point3D lower(origin.getX() - radius, origin.getY() - radius, origin.getZ() - radius);
+	Point3D upper(origin.GetX() + radius, origin.GetY() + radius, origin.GetZ() + radius);
+	Point3D lower(origin.GetX() - radius, origin.GetY() - radius, origin.GetZ() - radius);
 
 	return GeometryExtent3D(lower, upper);
 }
