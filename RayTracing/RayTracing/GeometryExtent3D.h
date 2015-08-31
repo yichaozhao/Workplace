@@ -18,6 +18,8 @@ public:
 	const Point3D& GetUpper() const { return m_upper; }
 	const Point3D& GetLower() const { return m_lower; }
 
+	bool operator== (const GeometryExtent3D& extent) const;
+	bool operator!= (const GeometryExtent3D& extent) const { return !operator==(extent); }
 };
 
 

@@ -22,6 +22,8 @@ public:
 	const Point3D& GetOrigin() const { return m_origin; };
 	const Point3D& GetDirection() const { return m_direction; }
 
+	bool operator== (const Ray& ray) const;
+	bool operator!= (const Ray& ray) const { return !operator==(ray); }
 };
 
 

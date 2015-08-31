@@ -1,5 +1,6 @@
 #include "Octree.h"
 #include <assert.h>
+#include "MathUtils.h"
 
 void Octree::CreateOctree(Octree*& pOctree, std::vector<Geom::Object*> pObjectVector)
 {
@@ -51,5 +52,17 @@ void Octree::AddObject(Geom::Object* pObject)
 
 void Octree::AddObjectIntoSubOctree(Geom::Object* pObject)
 {
+	assert(m_pObjectVector.size() == 0 && m_pOctreeVector.size() == OCTREE_CHILD_COUNT);
 	const Geom::GeometryExtent3D& extent = pObject->GetGeometryExtent3D();
+
+	// insert into x0y0z0 if needed
+	Geom::Point3D p_x0y0z0 = m_extent.GetLower();
+	// insert into x0y1z0 if needed
+	// insert into x0y0z1 if needed
+	// insert into x0y1z1 if needed
+	// insert into x1y0z0 if needed
+	// insert into x1y1z0 if needed
+	// insert into x1y0z1 if needed
+	// insert into x1y1z1 if needed
+	Geom::Point3D p_x1y1z1 = m_extent.GetUpper();
 }

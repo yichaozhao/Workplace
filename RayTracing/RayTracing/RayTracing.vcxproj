@@ -160,6 +160,8 @@
     <ClCompile Include="GeometryExtent3D.cpp" />
     <ClCompile Include="MathUtils.cpp" />
     <ClCompile Include="Octree.cpp" />
+    <ClCompile Include="Point3D.cpp" />
+    <ClCompile Include="Ray.cpp" />
     <ClCompile Include="Sphere.cpp" />
     <ClCompile Include="Triangle.cpp" />
   </ItemGroup>

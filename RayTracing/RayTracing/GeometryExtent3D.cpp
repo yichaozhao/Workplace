@@ -14,4 +14,9 @@ GeometryExtent3D::GeometryExtent3D(Point3D lower, Point3D upper) :
 	assert(Math::IsGreaterEqual(upper.getZ(), lower.getZ()));
 }
 
+bool GeometryExtent3D::operator== (const GeometryExtent3D& extent) const
+{
+	return m_lower == extent.GetLower() && m_upper == extent.GetUpper();
+}
+
 }

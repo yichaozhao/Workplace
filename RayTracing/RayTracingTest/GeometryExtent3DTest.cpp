@@ -12,13 +12,8 @@ TEST(GeometryExtent3DTest, constructor)
 
 	Geom::GeometryExtent3D extent(lower, upper);
 
-	EXPECT_TRUE(Math::IsEqual(extent.GetUpper().getX(), upper_x));
-	EXPECT_TRUE(Math::IsEqual(extent.GetUpper().getY(), upper_y));
-	EXPECT_TRUE(Math::IsEqual(extent.GetUpper().getZ(), upper_z));
-
-	EXPECT_TRUE(Math::IsEqual(extent.GetLower().getX(), lower_x));
-	EXPECT_TRUE(Math::IsEqual(extent.GetLower().getY(), lower_y));
-	EXPECT_TRUE(Math::IsEqual(extent.GetLower().getZ(), lower_z));
+	EXPECT_EQ(extent.GetLower(), lower);
+	EXPECT_EQ(extent.GetUpper(), upper);
 }
 
 TEST(GeometryExtent3DTest, constructor_assert)
@@ -27,5 +22,17 @@ TEST(GeometryExtent3DTest, constructor_assert)
 	Geom::Point3D lower(1, 1, 1);
 
 	EXPECT_DEATH(Geom::GeometryExtent3D(lower, upper), "1");
-	
+}
+
+TEST(GeometryExtent3DTest, equality)
+{
+	Geom::Point3D lower(0, 0, 0);
+	Geom::Point3D upper(1, 1, 1);
+
+	Geom::GeometryExtent3D extent1(lower, upper);
+	Geom::GeometryExtent3D extent2(lower, upper);
+	EXPECT_EQ(extent1, extent2);
+
+	Geom::GeometryExtent3D extent3(lower, lower);
+	EXPECT_NE(extent1, extent3);
 }

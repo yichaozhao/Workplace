@@ -28,6 +28,8 @@ public:
 	const Point3D& GetPointB() const { return m_b; };
 	const Point3D& GetPointC() const { return m_c; };
 
+	bool operator== (const Triangle& triangle) const;
+	bool operator!= (const Triangle& triangle) const { return !operator==(triangle); }
 };
 
 

@@ -1,6 +1,5 @@
 #pragma once
 #include "Object.h"
-#include "Point3D.h"
 #include "GeometryExtent3D.h"
 
 namespace Geom
@@ -24,6 +23,8 @@ public:
 	const Point3D& GetOrigin() const { return m_origin; }
 	double GetRadius() const { return m_radius; }
 
+	bool operator== (const Sphere& sphere) const;
+	bool operator!= (const Sphere& sphere) const { return !operator==(sphere); }
 };
 
 

@@ -13,4 +13,9 @@ Triangle::Triangle(Point3D a, Point3D b, Point3D c) :
 {
 }
 
+bool Triangle::operator== (const Triangle& triangle) const
+{
+	return m_a == triangle.GetPointA() && m_b == triangle.GetPointB() && m_c == triangle.GetPointC();
+}
+
 }

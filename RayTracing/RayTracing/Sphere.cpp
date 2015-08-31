@@ -1,4 +1,5 @@
 #include "Sphere.h"
+#include "MathUtils.h"
 
 namespace Geom
 {
@@ -16,5 +17,10 @@ Sphere::Sphere(Point3D origin, double radius) :
 	m_radius(radius),
 	m_extent(CalculateGeometryExtent(origin, radius))
 {}
+
+bool Sphere::operator== (const Sphere& sphere) const
+{
+	return m_origin == sphere.GetOrigin() && Math::IsEqual(m_radius, sphere.GetRadius());
+}
 
 }

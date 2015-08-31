@@ -25,6 +25,8 @@ public:
 	double getY() const { return m_y; }
 	double getZ() const { return m_z; }
 
+	bool operator== (const Point3D& point3D) const;
+	bool operator!= (const Point3D& point3D) const { return !operator==(point3D); }
 };
 
 

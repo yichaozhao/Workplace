@@ -14,12 +14,20 @@ TEST(RayTest, constructor)
 
 	Geom::Ray ray(origin, direction);
 
-	EXPECT_EQ(origin.getX(), origin_x);
-	EXPECT_EQ(origin.getY(), origin_y);
-	EXPECT_EQ(origin.getZ(), origin_z);
+	EXPECT_EQ(ray.GetOrigin(), origin);
+	EXPECT_EQ(ray.GetDirection(), direction);
+}
 
-	EXPECT_EQ(direction.getX(), direction_x);
-	EXPECT_EQ(direction.getY(), direction_y);
-	EXPECT_EQ(direction.getZ(), direction_z);
+TEST(RayTest, equality)
+{
+	Geom::Point3D origin(0, 0, 0);
+	Geom::Point3D direction(1, 1, 1);
+
+	Geom::Ray ray1(origin, direction);
+	Geom::Ray ray2(origin, direction);
+	EXPECT_EQ(ray1, ray2);
+
+	Geom::Ray ray3(origin, origin);
+	EXPECT_NE(ray1, ray3);
 }
 

@@ -92,6 +92,12 @@
     <ClCompile Include="Sphere.cpp">
       <Filter>Source Files\Utils\Geometry</Filter>
     </ClCompile>
+    <ClCompile Include="Point3D.cpp">
+      <Filter>Source Files\Utils\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Ray.cpp">
+      <Filter>Source Files\Utils\Geometry</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Octree.jpg">
