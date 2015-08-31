@@ -1,4 +1,5 @@
 #pragma once
+#include "Vector3D.h"
 
 namespace Geom
 {
@@ -8,9 +9,9 @@ class Point3D
 {
 
 private:
-	double m_x;
-	double m_y;
-	double m_z;
+	const double m_x;
+	const double m_y;
+	const double m_z;
 
 public:
 	Point3D(double x, double y, double z) :
@@ -25,8 +26,12 @@ public:
 	double GetY() const { return m_y; }
 	double GetZ() const { return m_z; }
 
-	bool operator== (const Point3D& point3D) const;
-	bool operator!= (const Point3D& point3D) const { return !operator==(point3D); }
+	bool operator== (const Point3D& point) const;
+	bool operator!= (const Point3D& point) const { return !operator==(point); }
+	Point3D operator+ (const Vector3D& vector) const;
+	Point3D operator- (const Vector3D& vector) const;
+
+	Vector3D VectorTo(const Point3D& point) const;
 };
 
 

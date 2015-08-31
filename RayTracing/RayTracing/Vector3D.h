@@ -8,9 +8,9 @@ class Vector3D
 {
 
 private:
-	double m_x;
-	double m_y;
-	double m_z;
+	const double m_x;
+	const double m_y;
+	const double m_z;
 
 public:
 	Vector3D(double x, double y, double z) :
