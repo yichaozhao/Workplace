@@ -5,3 +5,4 @@
 #include "Sphere.h"
 #include "Triangle.h"
 #include "GeometryExtent3D.h"
+#include "Vector3D.h"

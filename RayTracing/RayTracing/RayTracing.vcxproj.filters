@@ -75,6 +75,9 @@
     <ClInclude Include="GeometryExtent3D.h">
       <Filter>Header Files\Utils\Geometry</Filter>
     </ClInclude>
+    <ClInclude Include="Vector3D.h">
+      <Filter>Header Files\Utils\Geometry</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MathUtils.cpp">
@@ -98,10 +101,16 @@
     <ClCompile Include="Ray.cpp">
       <Filter>Source Files\Utils\Geometry</Filter>
     </ClCompile>
+    <ClCompile Include="Vector3D.cpp">
+      <Filter>Source Files\Utils\Geometry</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Octree.jpg">
       <Filter>Resource Files</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RayTracing.ruleset" />
   </ItemGroup>
 </Project>

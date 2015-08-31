@@ -71,6 +71,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <CodeAnalysisRuleSet>RayTracingTest2.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -90,6 +92,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>D:\workplace\Workplace\RayTracing\RayTracing;D:\workplace\Workplace\RayTracing\GoogleTest\gtest-1.7.0\include;D:\workplace\Workplace\RayTracing\GoogleTest\gtest-1.7.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <EnablePREfast>true</EnablePREfast>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -162,6 +165,7 @@
     <ClCompile Include="RayTest.cpp" />
     <ClCompile Include="SphereTest.cpp" />
     <ClCompile Include="TriangleTest.cpp" />
+    <ClCompile Include="Vector3DTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GoogleTest\GoogleTest.vcxproj">
@@ -173,6 +177,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Geometries.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RayTracingTest.ruleset" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
