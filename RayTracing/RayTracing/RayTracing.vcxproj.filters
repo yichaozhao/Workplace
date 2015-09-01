@@ -78,6 +78,9 @@
     <ClInclude Include="Vector3D.h">
       <Filter>Header Files\Utils\Geometry</Filter>
     </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MathUtils.cpp">
@@ -103,6 +106,9 @@
     </ClCompile>
     <ClCompile Include="Vector3D.cpp">
       <Filter>Source Files\Utils\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Color.cpp">
+      <Filter>Source Files\Utils</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

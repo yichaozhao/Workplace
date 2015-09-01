@@ -51,6 +51,9 @@
     <ClCompile Include="Vector3DTest.cpp">
       <Filter>Source Files\Utils\Geometry</Filter>
     </ClCompile>
+    <ClCompile Include="ColorTest.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Geometries.h">

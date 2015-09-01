@@ -9,11 +9,20 @@ TEST(MathUtilsTest, precision)
 	EXPECT_EQ(1e-9, Math::PRECISION_DOUBLE);
 }
 
-TEST(MathUtilsTest, IsEqual)
+TEST(MathUtilsTest, IsEqual_double)
 {
 	double a = 1;
 	double b = a + Math::PRECISION_DOUBLE * 100;
 	double c = a + Math::PRECISION_DOUBLE/10;
+	EXPECT_FALSE(Math::IsEqual(a, b));
+	EXPECT_TRUE(Math::IsEqual(a, c));
+}
+
+TEST(MathUtilsTest, IsEqual_float)
+{
+	float a = 1;
+	float b = a + Math::PRECISION_FLOAT * 100;
+	float c = a + Math::PRECISION_FLOAT/10;
 	EXPECT_FALSE(Math::IsEqual(a, b));
 	EXPECT_TRUE(Math::IsEqual(a, c));
 }

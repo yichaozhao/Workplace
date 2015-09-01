@@ -6,8 +6,10 @@ namespace Math
 {
 
 static const double PRECISION_DOUBLE = 1e-9;
+static const float PRECISION_FLOAT = 1e-5f;
 
 bool IsEqual(double a, double b, double precision = PRECISION_DOUBLE);
+bool IsEqual(float a, float b, float precision = PRECISION_FLOAT);
 
 bool IsLess(double a, double b, double precision = PRECISION_DOUBLE);
 

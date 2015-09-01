@@ -11,6 +11,11 @@ bool IsEqual(double a, double b, double precision)
 	return std::abs(a - b) < precision;
 }
 
+bool IsEqual(float a, float b, float precision)
+{
+	return std::abs(a - b) < precision;
+}
+
 bool IsLess(double a, double b, double precision)
 {
 	return a < b && !IsEqual(a, b, precision);
