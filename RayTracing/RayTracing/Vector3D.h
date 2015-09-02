@@ -8,9 +8,9 @@ class Vector3D
 {
 
 private:
-	const double m_x;
-	const double m_y;
-	const double m_z;
+	double m_x;
+	double m_y;
+	double m_z;
 
 public:
 	Vector3D(double x, double y, double z) :
@@ -35,6 +35,8 @@ public:
 
 	double Dot(Vector3D vector) const;
 	Vector3D Cross(Vector3D vector) const;
+	double CalculateLength() const;
+	Vector3D& Normalize();
 };
 
 

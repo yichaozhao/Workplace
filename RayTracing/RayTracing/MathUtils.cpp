@@ -1,5 +1,4 @@
 #include "MathUtils.h"
-#include <cmath>
 #include <stdarg.h>
 #include <limits>
 #include "Object.h"

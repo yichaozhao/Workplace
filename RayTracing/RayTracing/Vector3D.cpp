@@ -53,4 +53,21 @@ Vector3D Vector3D::Cross(Vector3D vector) const
 		);
 }
 
+static const int SQUARE_EXP = 2;
+
+double Vector3D::CalculateLength() const
+{
+	return std::sqrt(std::pow(m_x, SQUARE_EXP) + std::pow(m_y, SQUARE_EXP) + std::pow(m_z, SQUARE_EXP));
+}
+
+Vector3D& Vector3D::Normalize()
+{
+	double length = CalculateLength();
+	m_x /= length;
+	m_y /= length;
+	m_z /= length;
+
+	return *this;
+}
+
 }

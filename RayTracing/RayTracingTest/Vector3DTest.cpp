@@ -99,3 +99,23 @@ TEST(Vector3DTest, cross_product)
 	EXPECT_EQ(v1.Cross(v2), Geom::Vector3D(0.374, -0.4852, 0.1559));
 	EXPECT_EQ(v2.Cross(v1), Geom::Vector3D(-0.374, 0.4852, -0.1559));
 }
+
+TEST(Vector3DTest, length)
+{
+	double x = 1;
+	double y = 2;
+	double z = 3;
+	Geom::Vector3D vector(x, y, z);
+	EXPECT_TRUE(Math::IsEqual(vector.CalculateLength(), std::sqrt(std::pow(x, 2) + std::pow(y, 2) + std::pow(z, 2))));
+}
+
+TEST(Vector3DTest, normalize)
+{
+	double x = 1;
+	double y = 2;
+	double z = 3;
+	double base = std::sqrt(std::pow(x, 2) + std::pow(y, 2) + std::pow(z, 2));
+	Geom::Vector3D vector(x, y, z);
+	Geom::Vector3D expectedNormalizedVector(x / base, y / base, z / base);
+	EXPECT_EQ(vector.Normalize(), expectedNormalizedVector);
+}

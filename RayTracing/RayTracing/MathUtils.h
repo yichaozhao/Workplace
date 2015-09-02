@@ -2,6 +2,7 @@
 #include "GeometryExtent3D.h"
 #include "Point3D.h"
 #include <vector>
+#include <cmath>
 
 namespace Geom
 {

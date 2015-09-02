@@ -10,7 +10,7 @@ TEST(RayTest, constructor)
 	double direction_x = 3, direction_y = 4, direction_z = 5;
 
 	Geom::Point3D origin(origin_x, origin_y, origin_z);
-	Geom::Point3D direction(direction_x, direction_y, direction_z);
+	Geom::Vector3D direction(direction_x, direction_y, direction_z);
 
 	Geom::Ray ray(origin, direction);
 
@@ -21,13 +21,13 @@ TEST(RayTest, constructor)
 TEST(RayTest, equality)
 {
 	Geom::Point3D origin(0, 0, 0);
-	Geom::Point3D direction(1, 1, 1);
+	Geom::Vector3D direction(1, 1, 1);
 
 	Geom::Ray ray1(origin, direction);
 	Geom::Ray ray2(origin, direction);
 	EXPECT_EQ(ray1, ray2);
 
-	Geom::Ray ray3(origin, origin);
+	Geom::Ray ray3(origin, Geom::Vector3D(0, 0, 0));
 	EXPECT_NE(ray1, ray3);
 }
 
