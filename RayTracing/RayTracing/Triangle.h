@@ -19,7 +19,7 @@ private:
 	GeometryExtent3D m_extent;
 
 public:
-	Triangle(Point3D a, Point3D b, Point3D c);
+	Triangle(Point3D& a, Point3D& b, Point3D& c);
 	~Triangle() {}
 
 	virtual const GeometryExtent3D& GetGeometryExtent() const override { return m_extent; }

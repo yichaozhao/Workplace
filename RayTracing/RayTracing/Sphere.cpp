@@ -12,7 +12,7 @@ GeometryExtent3D CalculateGeometryExtent(Point3D origin, double radius)
 	return GeometryExtent3D(lower, upper);
 }
 
-Sphere::Sphere(Point3D& origin, double radius) :
+Sphere::Sphere(const Point3D& origin, double radius) :
 	m_origin(origin),
 	m_radius(radius),
 	m_extent(CalculateGeometryExtent(origin, radius))
