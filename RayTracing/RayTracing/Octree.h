@@ -25,19 +25,26 @@ private:
 	static const int X1Y1Z1 = 7;
 
 	Geom::GeometryExtent3D m_extent;
-	std::vector<Octree*> m_pOctreeVector = std::vector<Octree*>(0);
-	std::vector<Geom::Object*> m_pObjectVector;
+	int m_level;
 
-	Octree(Geom::GeometryExtent3D extent) :
-		m_extent(extent)
+	std::vector<Geom::Object*> m_pObjectVector = std::vector<Geom::Object*>(0);
+	std::vector<Octree*> m_pOctreeVector = std::vector<Octree*>(0);
+
+	Octree(Geom::GeometryExtent3D extent, int level = 0) :
+		m_extent(extent),
+		m_level(level)
 	{}
 
-	void AddObject(Geom::Object* pObject);
 	void AddObjectIntoSubOctree(Geom::Object* pObject);
+	void InitializeChildOctrees();
+
+	Geom::GeometryExtent3D& GetGeometryExtent() { return m_extent; }
 
 public:
-	~Octree() {}
+	~Octree();
 
-	static void CreateOctree(Octree*& pOctree, std::vector<Geom::Object*> pObjectVector);
-
+	static void CreateOctree(Octree*& pOctree, std::vector<Geom::Object*>& pObjectVector);
+	void AddObject(Geom::Object* pObject);
+	int DebugCountObject() const;
+	bool DebugVolumeChecksum() const;
 };

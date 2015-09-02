@@ -19,4 +19,10 @@ bool GeometryExtent3D::operator== (const GeometryExtent3D& extent) const
 	return m_lower == extent.GetLower() && m_upper == extent.GetUpper();
 }
 
+double GeometryExtent3D::CalculateVolume() const
+{
+	Vector3D vector = m_lower.VectorTo(m_upper);
+	return vector.GetX() * vector.GetY() * vector.GetZ();
+}
+
 }

@@ -2,6 +2,8 @@
 #include <cmath>
 #include <stdarg.h>
 #include <limits>
+#include "Object.h"
+#include <assert.h>
 
 namespace Math
 {
@@ -46,21 +48,46 @@ Geom::GeometryExtent3D CalculateGeometryExtent(int argCount, Geom::Point3D ...)
 
 	for (int index = 0; index < argCount; index++)
 	{
-		Geom::Point3D& p = va_arg(pointList, Geom::Point3D);
+		Geom::Point3D& point = va_arg(pointList, Geom::Point3D);
 
-		min_x = std::fmin(min_x, p.GetX());
-		min_y = std::fmin(min_y, p.GetY());
-		min_z = std::fmin(min_z, p.GetZ());
+		min_x = std::fmin(min_x, point.GetX());
+		min_y = std::fmin(min_y, point.GetY());
+		min_z = std::fmin(min_z, point.GetZ());
 
-		max_x = std::fmax(max_x, p.GetX());
-		max_y = std::fmax(max_y, p.GetY());
-		max_z = std::fmax(max_z, p.GetZ());
+		max_x = std::fmax(max_x, point.GetX());
+		max_y = std::fmax(max_y, point.GetY());
+		max_z = std::fmax(max_z, point.GetZ());
 	}
 
 	return Geom::GeometryExtent3D(Geom::Point3D(min_x, min_y, min_z), Geom::Point3D(max_x, max_y, max_z));
 }
 
-bool HasIntersection(Geom::GeometryExtent3D extent1, Geom::GeometryExtent3D extent2)
+Geom::GeometryExtent3D CalculateGeometryExtentFromObjects(const std::vector<Geom::Object*>& objectVector)
+{
+	assert(objectVector.size() > 0);
+
+	double min_x = std::numeric_limits<double>::max(), min_y = std::numeric_limits<double>::max(), min_z = std::numeric_limits<double>::max();
+	double max_x = std::numeric_limits<double>::lowest(), max_y = std::numeric_limits<double>::lowest(), max_z = std::numeric_limits<double>::lowest();
+
+	for (const auto& pObject : objectVector)
+	{
+		assert(pObject);
+		const Geom::Point3D& lower = pObject->GetGeometryExtent().GetLower();
+		const Geom::Point3D& upper = pObject->GetGeometryExtent().GetUpper();
+
+		min_x = std::fmin(min_x, lower.GetX());
+		min_y = std::fmin(min_y, lower.GetY());
+		min_z = std::fmin(min_z, lower.GetZ());
+
+		max_x = std::fmax(max_x, upper.GetX());
+		max_y = std::fmax(max_y, upper.GetY());
+		max_z = std::fmax(max_z, upper.GetZ());
+	}
+
+	return Geom::GeometryExtent3D(Geom::Point3D(min_x, min_y, min_z), Geom::Point3D(max_x, max_y, max_z));
+}
+
+bool IsTwoExtentsIntersecting(Geom::GeometryExtent3D extent1, Geom::GeometryExtent3D extent2)
 {
 	return 
 		(IsLessEqual(extent1.GetLower().GetX(), extent2.GetUpper().GetX()) && IsLessEqual(extent2.GetLower().GetX(), extent1.GetUpper().GetX())) &&

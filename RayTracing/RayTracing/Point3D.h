@@ -1,5 +1,6 @@
 #pragma once
 #include "Vector3D.h"
+#include "Object.h"
 
 namespace Geom
 {

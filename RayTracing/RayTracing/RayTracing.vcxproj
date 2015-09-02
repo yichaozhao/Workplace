@@ -150,6 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Color.h" />
+    <ClInclude Include="Dot.h" />
     <ClInclude Include="GeometryExtent3D.h" />
     <ClInclude Include="MathUtils.h" />
     <ClInclude Include="Octree.h" />
@@ -160,6 +161,7 @@
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Triangle.h" />
+    <ClInclude Include="Utils.h" />
     <ClInclude Include="Vector3D.h" />
   </ItemGroup>
   <ItemGroup>
@@ -171,6 +173,7 @@
     <ClCompile Include="Ray.cpp" />
     <ClCompile Include="Sphere.cpp" />
     <ClCompile Include="Triangle.cpp" />
+    <ClCompile Include="Utils.cpp" />
     <ClCompile Include="Vector3D.cpp" />
   </ItemGroup>
   <ItemGroup>

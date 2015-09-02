@@ -1,6 +1,12 @@
 #pragma once
 #include "GeometryExtent3D.h"
 #include "Point3D.h"
+#include <vector>
+
+namespace Geom
+{
+class Object;
+}
 
 namespace Math
 {
@@ -19,8 +25,9 @@ bool IsGreater(double a, double b, double precision = PRECISION_DOUBLE);
 
 bool IsGreaterEqual(double a, double b, double precision = PRECISION_DOUBLE);
 
+Geom::GeometryExtent3D CalculateGeometryExtentFromObjects(const std::vector<Geom::Object*>& objectVector);
 Geom::GeometryExtent3D CalculateGeometryExtent(int argCount, Geom::Point3D ...);
 
-bool HasIntersection(Geom::GeometryExtent3D extent1, Geom::GeometryExtent3D extent2);
+bool IsTwoExtentsIntersecting(Geom::GeometryExtent3D extent1, Geom::GeometryExtent3D extent2);
 
 }

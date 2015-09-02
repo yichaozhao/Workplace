@@ -36,3 +36,11 @@ TEST(GeometryExtent3DTest, equality)
 	Geom::GeometryExtent3D extent3(lower, lower);
 	EXPECT_NE(extent1, extent3);
 }
+
+TEST(GeometryExtent3DTest, calculateVolume)
+{
+	Geom::Point3D lower(0, 0, 0);
+	Geom::Point3D upper(2, 3, 4);
+	Geom::GeometryExtent3D extent(lower, upper);
+	EXPECT_EQ(extent.CalculateVolume(), 24);
+}

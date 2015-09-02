@@ -18,7 +18,7 @@ TEST(SphereTest, constructor)
 	Geom::Point3D expectedExtentLower(p_x - radius, p_y - radius, p_z - radius);
 	Geom::Point3D expectedExtentUpper(p_x + radius, p_y + radius, p_z + radius);
 	Geom::GeometryExtent3D expectedExtent(expectedExtentLower, expectedExtentUpper);
-	EXPECT_EQ(expectedExtent, sphere.GetGeometryExtent3D());
+	EXPECT_EQ(expectedExtent, sphere.GetGeometryExtent());
 }
 
 TEST(SphereTest, equality)

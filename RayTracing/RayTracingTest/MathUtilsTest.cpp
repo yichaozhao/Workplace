@@ -1,7 +1,7 @@
 #pragma once
 #include "gtest/gtest.h"
 #include "MathUtils.h"
-#include "Point3D.h"
+#include "Geometries.h"
 
 
 TEST(MathUtilsTest, precision)
@@ -89,7 +89,40 @@ TEST(MathUtilsTest, CalculateGeometryExtent)
 	EXPECT_TRUE(Math::IsEqual(extent.GetUpper().GetZ(), 10));
 }
 
-TEST(MathUtilsTest, HasIntersection)
+TEST(MathUtilsTest, CalculateGeometryExtent2)
+{
+	Geom::Point3D p_x0y0z0(0, 0, 0);
+	Geom::Point3D p_x0y1z0(0, 1, 0);
+	Geom::Point3D p_x0y0z1(0, 0, 1);
+	Geom::Point3D p_x0y1z1(0, 1, 1);
+	Geom::Point3D p_x1y0z0(1, 0, 0);
+	Geom::Point3D p_x1y1z0(1, 1, 0);
+	Geom::Point3D p_x1y0z1(1, 0, 1);
+	Geom::Point3D p_x1y1z1(1, 1, 1);
+
+	Geom::GeometryExtent3D extent1 = Math::CalculateGeometryExtent(2, p_x0y0z0, p_x1y1z1);
+	Geom::GeometryExtent3D extent2 = Math::CalculateGeometryExtent(2, p_x0y1z0, p_x1y0z1);
+	Geom::GeometryExtent3D extent3 = Math::CalculateGeometryExtent(2, p_x0y0z1, p_x1y1z0);
+	Geom::GeometryExtent3D extent4 = Math::CalculateGeometryExtent(2, p_x0y1z1, p_x1y0z0);
+	Geom::GeometryExtent3D expectedExtent = Geom::GeometryExtent3D(Geom::Point3D(0, 0, 0), Geom::Point3D(1, 1, 1));
+
+	EXPECT_EQ(extent1, expectedExtent);
+	EXPECT_EQ(extent2, expectedExtent);
+	EXPECT_EQ(extent3, expectedExtent);
+	EXPECT_EQ(extent4, expectedExtent);
+}
+
+TEST(MathUtilsTest, CalculateGeometryExtentFromObjects)
+{
+	Geom::Sphere sphere1(Geom::Point3D(0, 0, 0), 2);
+	Geom::Sphere sphere2(Geom::Point3D(0, 0, 0), 3);
+	Geom::Sphere sphere3(Geom::Point3D(10, 10, 10), 2);
+
+	Geom::GeometryExtent3D expectedExtent(Geom::Point3D(-3, -3, -3), Geom::Point3D(12, 12, 12));
+	EXPECT_EQ(Math::CalculateGeometryExtentFromObjects({&sphere1, &sphere2, &sphere3}), expectedExtent);
+}
+
+TEST(MathUtilsTest, IsTwoExtentsIntersecting)
 {
 	Geom::Point3D p1(1, 1, 1);
 	Geom::Point3D p2(2, 2, 2);
@@ -99,14 +132,14 @@ TEST(MathUtilsTest, HasIntersection)
 	Geom::GeometryExtent3D e12(p1, p2);
 	Geom::GeometryExtent3D e34(p3, p4);
 
-	EXPECT_FALSE(Math::HasIntersection(e12, e34));
+	EXPECT_FALSE(Math::IsTwoExtentsIntersecting(e12, e34));
 
 	Geom::GeometryExtent3D e23(p2, p3);
-	EXPECT_TRUE(Math::HasIntersection(e12, e23));
-	EXPECT_TRUE(Math::HasIntersection(e23, e12));
+	EXPECT_TRUE(Math::IsTwoExtentsIntersecting(e12, e23));
+	EXPECT_TRUE(Math::IsTwoExtentsIntersecting(e23, e12));
 
 	Geom::GeometryExtent3D e13(p1, p3);
 	Geom::GeometryExtent3D e24(p2, p4);
-	EXPECT_TRUE(Math::HasIntersection(e13, e24));
-	EXPECT_TRUE(Math::HasIntersection(e24, e13));
+	EXPECT_TRUE(Math::IsTwoExtentsIntersecting(e13, e24));
+	EXPECT_TRUE(Math::IsTwoExtentsIntersecting(e24, e13));
 }

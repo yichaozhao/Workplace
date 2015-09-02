@@ -5,10 +5,13 @@
 
 TEST(Point3DTest, constructor)
 {
-	Geom::Point3D point(0.13232, 0.2131, 0.32423);
-	EXPECT_EQ(point.GetX(), 0.13232);
-	EXPECT_EQ(point.GetY(), 0.2131);
-	EXPECT_EQ(point.GetZ(), 0.32423);
+	double x = 0.123123;
+	double y = 0.23123;
+	double z = 0.564234;
+	Geom::Point3D point(x, y, z);
+	EXPECT_EQ(point.GetX(), x);
+	EXPECT_EQ(point.GetY(), y);
+	EXPECT_EQ(point.GetZ(), z);
 }
 
 TEST(Point3DTest, equality)

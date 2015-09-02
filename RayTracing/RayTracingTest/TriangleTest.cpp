@@ -22,7 +22,7 @@ TEST(TriangleTest, constructor)
 	Geom::Point3D expectedExtentLower(0, 1, 2);
 	Geom::Point3D expectedExtentUpper(6, 7, 8);
 	Geom::GeometryExtent3D expectedExtent(expectedExtentLower, expectedExtentUpper);
-	EXPECT_EQ(expectedExtent, triangle.GetGeometryExtent3D());
+	EXPECT_EQ(expectedExtent, triangle.GetGeometryExtent());
 }
 
 TEST(TriangleTest, equality)

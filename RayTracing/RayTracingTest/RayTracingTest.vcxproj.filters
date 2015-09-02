@@ -54,6 +54,9 @@
     <ClCompile Include="ColorTest.cpp">
       <Filter>Source Files\Utils</Filter>
     </ClCompile>
+    <ClCompile Include="DotTest.cpp">
+      <Filter>Source Files\Utils\Geometry</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Geometries.h">
