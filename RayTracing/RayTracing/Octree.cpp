@@ -90,14 +90,14 @@ void Octree::InitializeChildOctrees()
 	// initialize child octrees
 	const int extentPointCount = 2;
 	const Geom::Point3D center = lower + vector * 0.5 /* Half */;
-	m_pOctreeVector[X0Y0Z0] = new Octree(Math::CalculateGeometryExtent(extentPointCount, p_x0y0z0, center), m_level + 1);
-	m_pOctreeVector[X0Y1Z0] = new Octree(Math::CalculateGeometryExtent(extentPointCount, p_x0y1z0, center), m_level + 1);
-	m_pOctreeVector[X0Y0Z1] = new Octree(Math::CalculateGeometryExtent(extentPointCount, p_x0y0z1, center), m_level + 1);
-	m_pOctreeVector[X0Y1Z1] = new Octree(Math::CalculateGeometryExtent(extentPointCount, p_x0y1z1, center), m_level + 1);
-	m_pOctreeVector[X1Y0Z0] = new Octree(Math::CalculateGeometryExtent(extentPointCount, p_x1y0z0, center), m_level + 1);
-	m_pOctreeVector[X1Y1Z0] = new Octree(Math::CalculateGeometryExtent(extentPointCount, p_x1y1z0, center), m_level + 1);
-	m_pOctreeVector[X1Y0Z1] = new Octree(Math::CalculateGeometryExtent(extentPointCount, p_x1y0z1, center), m_level + 1);
-	m_pOctreeVector[X1Y1Z1] = new Octree(Math::CalculateGeometryExtent(extentPointCount, p_x1y1z1, center), m_level + 1);
+	m_pOctreeVector[X0Y0Z0] = new Octree(Math::CalculateGeometryExtent(extentPointCount, &p_x0y0z0, &center), m_level + 1);
+	m_pOctreeVector[X0Y1Z0] = new Octree(Math::CalculateGeometryExtent(extentPointCount, &p_x0y1z0, &center), m_level + 1);
+	m_pOctreeVector[X0Y0Z1] = new Octree(Math::CalculateGeometryExtent(extentPointCount, &p_x0y0z1, &center), m_level + 1);
+	m_pOctreeVector[X0Y1Z1] = new Octree(Math::CalculateGeometryExtent(extentPointCount, &p_x0y1z1, &center), m_level + 1);
+	m_pOctreeVector[X1Y0Z0] = new Octree(Math::CalculateGeometryExtent(extentPointCount, &p_x1y0z0, &center), m_level + 1);
+	m_pOctreeVector[X1Y1Z0] = new Octree(Math::CalculateGeometryExtent(extentPointCount, &p_x1y1z0, &center), m_level + 1);
+	m_pOctreeVector[X1Y0Z1] = new Octree(Math::CalculateGeometryExtent(extentPointCount, &p_x1y0z1, &center), m_level + 1);
+	m_pOctreeVector[X1Y1Z1] = new Octree(Math::CalculateGeometryExtent(extentPointCount, &p_x1y1z1, &center), m_level + 1);
 }
 
 void Octree::AddObjectIntoSubOctree(Geom::Object* pObject)

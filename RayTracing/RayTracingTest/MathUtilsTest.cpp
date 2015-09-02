@@ -77,7 +77,7 @@ TEST(MathUtilsTest, CalculateGeometryExtent)
 	Geom::Point3D p2(1, -3, 2);
 	Geom::Point3D p3(5, 2, 10);
 
-	Geom::GeometryExtent3D extent = Math::CalculateGeometryExtent(3, p1, p2, p3);
+	Geom::GeometryExtent3D extent = Math::CalculateGeometryExtent(3, &p1, &p2, &p3);
 
 	EXPECT_TRUE(Math::IsEqual(extent.GetLower().GetX(), 1));
 	EXPECT_TRUE(Math::IsEqual(extent.GetUpper().GetX(), 5));
@@ -100,10 +100,10 @@ TEST(MathUtilsTest, CalculateGeometryExtent2)
 	Geom::Point3D p_x1y0z1(1, 0, 1);
 	Geom::Point3D p_x1y1z1(1, 1, 1);
 
-	Geom::GeometryExtent3D extent1 = Math::CalculateGeometryExtent(2, p_x0y0z0, p_x1y1z1);
-	Geom::GeometryExtent3D extent2 = Math::CalculateGeometryExtent(2, p_x0y1z0, p_x1y0z1);
-	Geom::GeometryExtent3D extent3 = Math::CalculateGeometryExtent(2, p_x0y0z1, p_x1y1z0);
-	Geom::GeometryExtent3D extent4 = Math::CalculateGeometryExtent(2, p_x0y1z1, p_x1y0z0);
+	Geom::GeometryExtent3D extent1 = Math::CalculateGeometryExtent(2, &p_x0y0z0, &p_x1y1z1);
+	Geom::GeometryExtent3D extent2 = Math::CalculateGeometryExtent(2, &p_x0y1z0, &p_x1y0z1);
+	Geom::GeometryExtent3D extent3 = Math::CalculateGeometryExtent(2, &p_x0y0z1, &p_x1y1z0);
+	Geom::GeometryExtent3D extent4 = Math::CalculateGeometryExtent(2, &p_x0y1z1, &p_x1y0z0);
 	Geom::GeometryExtent3D expectedExtent = Geom::GeometryExtent3D(Geom::Point3D(0, 0, 0), Geom::Point3D(1, 1, 1));
 
 	EXPECT_EQ(extent1, expectedExtent);

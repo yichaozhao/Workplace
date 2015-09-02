@@ -9,7 +9,7 @@ Triangle::Triangle(Point3D a, Point3D b, Point3D c) :
 	m_a(a),
 	m_b(b),
 	m_c(c),
-	m_extent(Math::CalculateGeometryExtent(3, a, b, c))
+	m_extent(Math::CalculateGeometryExtent(3, &a, &b, &c))
 {
 }
 

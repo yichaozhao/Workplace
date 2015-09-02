@@ -27,7 +27,7 @@ bool IsGreater(double a, double b, double precision = PRECISION_DOUBLE);
 bool IsGreaterEqual(double a, double b, double precision = PRECISION_DOUBLE);
 
 Geom::GeometryExtent3D CalculateGeometryExtentFromObjects(const std::vector<Geom::Object*>& objectVector);
-Geom::GeometryExtent3D CalculateGeometryExtent(int argCount, Geom::Point3D ...);
+Geom::GeometryExtent3D CalculateGeometryExtent(int argCount, Geom::Point3D* ...);
 
 bool IsTwoExtentsIntersecting(const Geom::GeometryExtent3D& extent1, const Geom::GeometryExtent3D& extent2);
 
