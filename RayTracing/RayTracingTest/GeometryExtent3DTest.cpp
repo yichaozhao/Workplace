@@ -44,3 +44,13 @@ TEST(GeometryExtent3DTest, calculateVolume)
 	Geom::GeometryExtent3D extent(lower, upper);
 	EXPECT_EQ(extent.CalculateVolume(), 24);
 }
+
+TEST(GeometryExtent3DTest, side_length)
+{
+	Geom::Point3D lower(-1, -2, -3);
+	Geom::Point3D upper(2, 3, 4);
+	Geom::GeometryExtent3D extent(lower, upper);
+	EXPECT_EQ(extent.GetLengthX(), 3);
+	EXPECT_EQ(extent.GetLengthY(), 5);
+	EXPECT_EQ(extent.GetLengthZ(), 7);
+}

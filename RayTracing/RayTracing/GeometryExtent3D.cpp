@@ -25,4 +25,20 @@ double GeometryExtent3D::CalculateVolume() const
 	return vector.GetX() * vector.GetY() * vector.GetZ();
 }
 
+double GeometryExtent3D::GetLengthX() const
+{
+	return m_upper.GetX() - m_lower.GetX();
+}
+
+double GeometryExtent3D::GetLengthY() const
+{
+	return m_upper.GetY() - m_lower.GetY();
+}
+
+double GeometryExtent3D::GetLengthZ() const
+{
+	return m_upper.GetZ() - m_lower.GetZ();
+}
+
+
 }

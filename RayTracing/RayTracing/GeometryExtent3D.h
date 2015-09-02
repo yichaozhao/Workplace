@@ -17,6 +17,9 @@ public:
 
 	const Point3D& GetUpper() const { return m_upper; }
 	const Point3D& GetLower() const { return m_lower; }
+	double GetLengthX() const;
+	double GetLengthY() const;
+	double GetLengthZ() const;
 	double CalculateVolume() const;
 
 	bool operator== (const GeometryExtent3D& extent) const;
