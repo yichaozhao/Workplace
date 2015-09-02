@@ -34,6 +34,7 @@ private:
 		m_extent(extent),
 		m_level(level)
 	{}
+	
 
 	void AddObjectIntoSubOctree(Geom::Object* pObject);
 	void InitializeChildOctrees();
@@ -45,6 +46,10 @@ public:
 
 	static void CreateOctree(Octree*& pOctree, std::vector<Geom::Object*>& pObjectVector);
 	void AddObject(Geom::Object* pObject);
+	bool IsLeaf() const { return m_pOctreeVector.size() == 0; }
+	Octree* GetChildOctree(int index) { return m_pOctreeVector.at(index); }
+
+	/* Debug Usage */
 	int DebugCountObject() const;
 	bool DebugVolumeChecksum() const;
 };
