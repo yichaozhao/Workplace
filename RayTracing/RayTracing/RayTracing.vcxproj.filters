@@ -121,11 +121,11 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Octree.jpg">
-      <Filter>Resource Files</Filter>
-    </Image>
+    <None Include="RayTracing.ruleset" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="RayTracing.ruleset" />
+    <Image Include="Octree.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

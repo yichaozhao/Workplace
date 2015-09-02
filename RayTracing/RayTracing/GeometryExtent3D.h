@@ -26,5 +26,4 @@ public:
 	bool operator!= (const GeometryExtent3D& extent) const { return !operator==(extent); }
 };
 
-
 }

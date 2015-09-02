@@ -177,10 +177,10 @@
     <ClCompile Include="Vector3D.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Octree.jpg" />
+    <None Include="RayTracing.ruleset" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="RayTracing.ruleset" />
+    <Image Include="Octree.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
