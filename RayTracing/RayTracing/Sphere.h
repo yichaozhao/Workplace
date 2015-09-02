@@ -15,7 +15,7 @@ private:
 	GeometryExtent3D m_extent;
 
 public:
-	Sphere(Point3D origin, double radius);
+	Sphere(Point3D& origin, double radius);
 	~Sphere() {}
 
 	virtual const GeometryExtent3D& GetGeometryExtent() const override { return m_extent; }

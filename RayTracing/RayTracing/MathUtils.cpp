@@ -86,7 +86,7 @@ Geom::GeometryExtent3D CalculateGeometryExtentFromObjects(const std::vector<Geom
 	return Geom::GeometryExtent3D(Geom::Point3D(min_x, min_y, min_z), Geom::Point3D(max_x, max_y, max_z));
 }
 
-bool IsTwoExtentsIntersecting(Geom::GeometryExtent3D extent1, Geom::GeometryExtent3D extent2)
+bool IsTwoExtentsIntersecting(const Geom::GeometryExtent3D& extent1, const Geom::GeometryExtent3D& extent2)
 {
 	return 
 		(IsLessEqual(extent1.GetLower().GetX(), extent2.GetUpper().GetX()) && IsLessEqual(extent2.GetLower().GetX(), extent1.GetUpper().GetX())) &&

@@ -5,7 +5,7 @@
 namespace Geom
 {
 
-GeometryExtent3D::GeometryExtent3D(Point3D lower, Point3D upper) :
+GeometryExtent3D::GeometryExtent3D(Point3D& lower, Point3D& upper) :
 	m_upper(upper),
 	m_lower(lower)
 {

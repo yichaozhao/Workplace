@@ -14,7 +14,7 @@ private:
 	Vector3D m_direction;
 
 public:
-	Ray(Point3D origin, Vector3D direction) :
+	Ray(Point3D& origin, Vector3D& direction) :
 		m_origin(origin),
 		m_direction(direction)
 	{}
