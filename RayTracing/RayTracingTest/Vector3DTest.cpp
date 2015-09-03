@@ -109,6 +109,12 @@ TEST(Vector3DTest, length)
 	EXPECT_TRUE(Math::IsEqual(vector.CalculateLength(), std::sqrt(std::pow(x, 2) + std::pow(y, 2) + std::pow(z, 2))));
 }
 
+TEST(Vector3DTest, length_zero_case)
+{
+	Geom::Vector3D vector(0, 0, 0);
+	EXPECT_DEATH(vector.Normalize(), "a");
+}
+
 TEST(Vector3DTest, normalize)
 {
 	double x = 1;

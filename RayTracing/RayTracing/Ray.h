@@ -10,14 +10,11 @@ class Ray
 {
 
 private:
-	Point3D m_origin;
+	const Point3D m_origin;
 	Vector3D m_direction;
 
 public:
-	Ray(const Point3D& origin, const Vector3D& direction) :
-		m_origin(origin),
-		m_direction(direction)
-	{}
+	Ray(const Point3D& origin, const Vector3D& direction);
 	~Ray() {}
 
 	const Point3D& GetOrigin() const { return m_origin; };

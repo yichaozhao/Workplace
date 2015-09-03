@@ -51,5 +51,8 @@ TEST(OctreeTest, CreateOctree)
 	EXPECT_FALSE(pOctree->IsLeaf());
 	EXPECT_TRUE(pOctree->GetChildOctree(0)->IsLeaf());
 
+	std::vector<const Octree*> pOctreeVector;
+	Octree::CalculateIntersectingOctrees(*pOctree, Geom::Ray(Geom::Point3D(0, 0, 0), Geom::Vector3D(1, 0.5, 1)), pOctreeVector);
+
 	delete pOctree;
 }

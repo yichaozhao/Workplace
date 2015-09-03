@@ -3,6 +3,7 @@
 #include "Point3D.h"
 #include <vector>
 #include <cmath>
+#include <algorithm>
 
 namespace Geom
 {

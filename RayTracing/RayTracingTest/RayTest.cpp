@@ -15,7 +15,7 @@ TEST(RayTest, constructor)
 	Geom::Ray ray(origin, direction);
 
 	EXPECT_EQ(ray.GetOrigin(), origin);
-	EXPECT_EQ(ray.GetDirection(), direction);
+	EXPECT_EQ(ray.GetDirection(), direction.Normalize());
 }
 
 TEST(RayTest, equality)
@@ -27,7 +27,7 @@ TEST(RayTest, equality)
 	Geom::Ray ray2(origin, direction);
 	EXPECT_EQ(ray1, ray2);
 
-	Geom::Ray ray3(origin, Geom::Vector3D(0, 0, 0));
+	Geom::Ray ray3(origin, Geom::Vector3D(2, 3, 2));
 	EXPECT_NE(ray1, ray3);
 }
 

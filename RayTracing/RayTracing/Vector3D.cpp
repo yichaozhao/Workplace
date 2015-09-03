@@ -63,6 +63,8 @@ double Vector3D::CalculateLength() const
 Vector3D& Vector3D::Normalize()
 {
 	double length = CalculateLength();
+	assert(!Math::IsEqual(length, 0));
+
 	m_x /= length;
 	m_y /= length;
 	m_z /= length;
