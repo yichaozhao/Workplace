@@ -8,8 +8,8 @@ class Octree
 {
 
 private:
-	static const int MAX_OBJECT_COUNT = 4;
-	static const int OCTREE_CHILD_COUNT = 8;
+	static const int MAX_OBJECT_COUNT = 8;
+	static const int OCTREE_CHILD_COUNT = 8; /* Please don't change */
 
 	/*
 	* For what it means, See Octree.jpg in References
