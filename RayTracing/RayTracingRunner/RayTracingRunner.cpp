@@ -1,11 +1,14 @@
 #include "RayTracer.h"
 #include <iostream>
-#include "Point3D.h"
+#include "Dot.h"
 
 int main()
 {
 	std::cout << "It Works!\n";
-	Geom::Point3D a(0, 0, 0);
-    return 0;
+	Geom::Dot a(0, 0, 0);
+	Geom::Object& b = a;
+	std::cout << a.toString() + "\n";
+	std::cout << b.toString() + "\n";
+	return 0;
 }
 

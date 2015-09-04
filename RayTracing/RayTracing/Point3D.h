@@ -9,7 +9,7 @@ namespace Geom
 class Point3D
 {
 
-private:
+protected:
 	const double m_x;
 	const double m_y;
 	const double m_z;

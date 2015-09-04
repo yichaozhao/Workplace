@@ -22,6 +22,7 @@ public:
 	~Dot() {}
 
 	virtual const GeometryExtent3D& GetGeometryExtent() const override { return m_extent; }
+	virtual std::string toString() const override;
 };
 
 
