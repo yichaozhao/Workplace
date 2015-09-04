@@ -45,12 +45,6 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Point3D.h">
       <Filter>Header Files\Utils\Geometry</Filter>
     </ClInclude>
@@ -124,6 +118,9 @@
     </ClCompile>
     <ClCompile Include="Dot.cpp">
       <Filter>Source Files\Utils\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="RayTracer.cpp">
+      <Filter>Source Files\RayTracer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

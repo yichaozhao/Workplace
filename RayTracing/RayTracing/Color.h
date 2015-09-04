@@ -4,10 +4,10 @@ class Color
 {
 
 private:
-	const float m_red = 0;		// [0, 1] red
-	const float m_green = 0;	// [0, 1] green
-	const float m_blue = 0;		// [0, 1] blue
-	const float m_alpha = 1;	// [0, 1] alpha
+	float m_red = 0;		// [0, 1] red
+	float m_green = 0;	// [0, 1] green
+	float m_blue = 0;		// [0, 1] blue
+	float m_alpha = 1;	// [0, 1] alpha
 
 public:
 	Color() {}

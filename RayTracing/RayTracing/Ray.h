@@ -10,7 +10,7 @@ class Ray
 {
 
 private:
-	const Point3D m_origin;
+	Point3D m_origin;
 	Vector3D m_direction;
 
 public:
