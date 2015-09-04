@@ -163,6 +163,7 @@
     <ClCompile Include="DotTest.cpp" />
     <ClCompile Include="GeometryExtent3DTest.cpp" />
     <ClCompile Include="OctreeTest.cpp" />
+    <ClCompile Include="PlaneTest.cpp" />
     <ClCompile Include="Point3DTest.cpp" />
     <ClCompile Include="MathUtilsTest.cpp" />
     <ClCompile Include="RayTest.cpp" />

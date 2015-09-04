@@ -7,3 +7,4 @@
 #include "GeometryExtent3D.h"
 #include "Vector3D.h"
 #include "Dot.h"
+#include "Plane.h"

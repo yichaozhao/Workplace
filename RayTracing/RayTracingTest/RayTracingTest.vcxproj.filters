@@ -57,6 +57,9 @@
     <ClCompile Include="OctreeTest.cpp">
       <Filter>Source Files\Utils</Filter>
     </ClCompile>
+    <ClCompile Include="PlaneTest.cpp">
+      <Filter>Source Files\Utils\Geometry</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Geometries.h">

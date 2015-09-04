@@ -84,6 +84,9 @@
     <ClInclude Include="RayTracer.h">
       <Filter>Header Files\RayTracer</Filter>
     </ClInclude>
+    <ClInclude Include="Plane.h">
+      <Filter>Header Files\Utils\Geometry</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MathUtils.cpp">
@@ -121,6 +124,9 @@
     </ClCompile>
     <ClCompile Include="RayTracer.cpp">
       <Filter>Source Files\RayTracer</Filter>
+    </ClCompile>
+    <ClCompile Include="Plane.cpp">
+      <Filter>Source Files\Utils\Geometry</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
