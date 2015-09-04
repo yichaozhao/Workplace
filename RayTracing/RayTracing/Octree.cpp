@@ -130,8 +130,7 @@ int Octree::DebugCountObject() const
 
 bool Octree::DebugVolumeChecksum() const
 {
-	// leaf
-	if (m_pObjectVector.size() != 0)
+	if (IsLeaf())
 		return true;
 
 	double volumeSum = 0;
@@ -248,8 +247,10 @@ void Octree::SearchOctree(
 			m_pOctreeVector[bit^X1Y1Z1]->SearchOctree(txm, tym, tzm, tx1, ty1, tz1, bit, resultVector);
 			currentIndex = _EXIT_;
 			break;
+		default:
+			assert(false);
 		}
-	} while (currentIndex < _EXIT_);
+	} while (currentIndex < _EXIT_ /* 8 */);
 }
 
 int Octree::CalculateFirstChildOctree(const Geom::Vector3D& t0, const Geom::Vector3D& tm) const

@@ -128,6 +128,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>D:\workplace\Workplace\RayTracing\GoogleTest\gtest-1.7.0;D:\workplace\Workplace\RayTracing\GoogleTest\gtest-1.7.0\include;D:\workplace\Workplace\RayTracing\RayTracing;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
